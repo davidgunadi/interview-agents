@@ -23,13 +23,14 @@ This repo manages the end-to-end hiring process: job descriptions, candidate CVs
 
 ## Agents
 
-Two reusable agent prompts live in `/agents/`. Load the relevant one before executing each phase.
+Two reusable agent prompts live in `/.claude/agents/`. Load the relevant one before executing each phase.
 
 | Agent | File | When to use |
 |-------|------|-------------|
-| Question Generator | `agents/question-generator.md` | After adding a candidate's `cv.md` — generates their tailored `questions.md` |
-| Interview Reviewer | `agents/interview-reviewer.md` | After the interview — pulls Fireflies transcript and fills in `questions.md` |
-| Create Summary | `agents/create-summary.md` | After reviewer fills `questions.md` — produces `summary.md` with rating, decision, and pros/cons |
+| Role Setup | `.claude/agents/role-setup.md` | After adding `_jd.md` — generates the master `_questions.md` template for the role |
+| Question Generator | `.claude/agents/question-generator.md` | After adding a candidate's `cv.md` — generates their tailored `questions.md` |
+| Interview Reviewer | `.claude/agents/interview-reviewer.md` | After the interview — pulls Fireflies transcript and fills in `questions.md` |
+| Create Summary | `.claude/agents/create-summary.md` | After reviewer fills `questions.md` — produces `summary.md` with rating, decision, and pros/cons |
 
 ---
 
