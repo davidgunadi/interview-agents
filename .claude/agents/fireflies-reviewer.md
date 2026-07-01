@@ -57,6 +57,16 @@ Be direct. Write what Dave needs to know to make a decision:
 - Was there a meaningful gap between the CV and what came through in conversation?
 - Would you personally want to work with this person? (optional, but useful)
 
+If the candidate raised or discussed topics not covered by any predefined question, and those topics are materially relevant to the hiring decision (a standout strength, a meaningful red flag, an unexpected domain, a concerning attitude), add an **Additional Topics** subsection after your summary notes:
+
+```
+### Additional Topics
+
+- [Topic]: [2–3 sentence summary of what was said and why it's relevant to the hiring decision]
+```
+
+Only include topics that would actually change how Dave evaluates this candidate. Skip minor tangents.
+
 ### Overall Recommendation
 
 Mark one:
