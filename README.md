@@ -31,6 +31,10 @@ roles/
 
 Create `roles/[role-name]/_jd.md` with the job description, then ask Claude to generate `_questions.md` from it.
 
+```
+/generate-questions [role-name]
+```
+
 **2. Add a candidate**
 
 Create `roles/[role-name]/[candidate-name]/cv.md` with the candidate's CV.
