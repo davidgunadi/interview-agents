@@ -1,8 +1,8 @@
 ---
-name: generatequestions
+name: generate-questions
 description: >
   Generates interview question files for a role in this repo. Use this skill whenever
-  the user runs `/generatequestions [role-name]`, or asks to generate, create, or produce
+  the user runs `/generate-questions [role-name]`, or asks to generate, create, or produce
   interview questions for a role or candidate. Also trigger when the user says things like
   "generate questions for Alice", "prep questions for the backend role", "create questions.md
   for [candidate]", or "set up questions for [role]".
@@ -28,7 +28,7 @@ Read `.claude/agents/role-setup.md` — it contains your persona, output format,
 - Check if `roles/[role-name]/_questions.md` exists
 - If it does **not** exist:
   - Read `roles/[role-name]/_jd.md` (stop and tell the user if it's missing)
-  - Follow `agents/role-setup.md` to generate the master template
+  - Follow `.claude/agents/role-setup.md` to generate the master template
   - Save to `roles/[role-name]/_questions.md`
   - Confirm to the user
 - If it already exists, skip this step silently and move on
@@ -45,7 +45,7 @@ Read `.claude/agents/question-generator.md` — it contains your persona, output
 - For each candidate to process:
   - Read `roles/[role-name]/[candidate-name]/cv.md`
   - Read `roles/[role-name]/_jd.md` and `roles/[role-name]/_questions.md` for context
-  - Follow `agents/question-generator.md` to generate the tailored question file
+  - Follow `.claude/agents/question-generator.md` to generate the tailored question file
   - Save to `roles/[role-name]/[candidate-name]/questions.md`
   - Confirm to the user when done
 

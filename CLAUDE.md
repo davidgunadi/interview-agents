@@ -12,6 +12,7 @@ This repo manages the end-to-end hiring process: job descriptions, candidate CVs
     [candidate-name]/       ← kebab-case, e.g. alice-tan
       cv.md                 ← candidate's CV
       questions.md          ← tailored copy of _questions.md; answers filled post-interview
+      summary.md            ← hire rating, decision, pros/cons
 ```
 
 ## File conventions
@@ -23,21 +24,21 @@ This repo manages the end-to-end hiring process: job descriptions, candidate CVs
 
 ## Agents
 
-Two reusable agent prompts live in `/.claude/agents/`. Load the relevant one before executing each phase.
+Four agent prompts live in `.claude/agents/`. Skills invoke these automatically — you don't need to load them manually.
 
 | Agent | File | When to use |
 |-------|------|-------------|
 | Role Setup | `.claude/agents/role-setup.md` | After adding `_jd.md` — generates the master `_questions.md` template for the role |
 | Question Generator | `.claude/agents/question-generator.md` | After adding a candidate's `cv.md` — generates their tailored `questions.md` |
-| Interview Reviewer | `.claude/agents/interview-reviewer.md` | After the interview — pulls Fireflies transcript and fills in `questions.md` |
+| Fireflies Reviewer | `.claude/agents/fireflies-reviewer.md` | After the interview — pulls Fireflies transcript and fills in `questions.md` |
 | Create Summary | `.claude/agents/create-summary.md` | After reviewer fills `questions.md` — produces `summary.md` with rating, decision, and pros/cons |
 
 ---
 
 ## Workflow
 
-1. Add a role: create `roles/[role-name]/_jd.md` and generate `_questions.md` from it
+1. Add a role: create `roles/[role-name]/_jd.md`, then run `/generate-questions [role-name]`
 2. Add a candidate: create `roles/[role-name]/[candidate-name]/cv.md`
-3. Generate tailored questions: Claude reads `_questions.md` + `cv.md` and produces `questions.md` for that candidate
-4. Post-interview: tell Claude which Fireflies recording maps to which candidate (by date or title), and Claude will pull the transcript and fill in answers in that candidate's `questions.md`
-5. Generate summary: Claude reads the completed `questions.md` and produces `summary.md` — hire rating (1–10), YES/NO decision, executive summary, pros and cons
+3. Generate tailored questions: run `/generate-questions [role-name] [candidate-name]`
+4. Post-interview: run `/review-fireflies [role-name] [candidate-name] [recording-name]` — requires Fireflies connector
+5. Generate summary: run `/summarize [role-name] [candidate-name]`

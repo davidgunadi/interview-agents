@@ -9,7 +9,7 @@ Three Claude agents handle distinct phases of the hiring pipeline:
 | Phase | Agent | What it does |
 |-------|-------|--------------|
 | Pre-interview | `.claude/agents/question-generator.md` | Reads JD + CV, generates a tailored `questions.md` with technical rubric, green/red flag questions, and soft skill probes |
-| Post-interview | `.claude/agents/interview-reviewer.md` | Pulls the Fireflies transcript and fills in every answer field and outcome checkbox in `questions.md` |
+| Post-interview | `.claude/agents/fireflies-reviewer.md` | Pulls the Fireflies transcript and fills in every answer field and outcome checkbox in `questions.md` |
 | Decision | `.claude/agents/create-summary.md` | Reads the completed `questions.md` and produces `summary.md` with a hire rating (1–10), YES/NO decision, and pros/cons |
 
 ## Folder structure
@@ -41,15 +41,27 @@ Create `roles/[role-name]/[candidate-name]/cv.md` with the candidate's CV.
 
 **3. Generate tailored questions**
 
-Load `.claude/agents/question-generator.md` and tell Claude to generate `questions.md` for the candidate. Claude reads the JD and CV and produces a question set with a technical rubric specific to this candidate's background.
+Run the same skill, this time with the candidate name. Claude reads the JD and CV and produces a question set with a technical rubric specific to this candidate's background.
+
+```
+/generate-questions [role-name] [candidate-name]
+```
 
 **4. Fill in answers post-interview**
 
-Load `.claude/agents/interview-reviewer.md` and tell Claude which Fireflies recording maps to this candidate (by date or title). Claude pulls the transcript and fills in every answer field and outcome checkbox in `questions.md`.
+Run the review skill with the Fireflies recording name. Claude pulls the transcript and fills in every answer field and outcome checkbox in `questions.md`. Requires the Fireflies connector to be authorized.
+
+```
+/review-fireflies [role-name] [candidate-name] [recording-name]
+```
 
 **5. Generate the hire summary**
 
-Load `.claude/agents/create-summary.md` and tell Claude to produce `summary.md`. Claude reads the completed `questions.md` and outputs a hire rating, YES/NO decision, executive summary, and evidence-backed pros/cons.
+Claude reads the completed `questions.md` and produces `summary.md` in the candidate's folder with a hire rating, YES/NO decision, executive summary, and evidence-backed pros/cons.
+
+```
+/summarize [role-name] [candidate-name]
+```
 
 ## Rating scale
 
@@ -68,4 +80,4 @@ Load `.claude/agents/create-summary.md` and tell Claude to produce `summary.md`.
 - Folder names: `kebab-case`
 - `_jd.md` and `_questions.md` are prefixed with `_` to distinguish role-level files from candidate folders
 - Never write candidate-specific content into `_questions.md` — always work in the candidate's own `questions.md`
-- Fireflies integration: specify the recording by date or title when invoking the Interview Reviewer agent
+- Fireflies integration: specify the recording by date or title when running `/review-fireflies`; requires the Fireflies connector to be authorized
