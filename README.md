@@ -29,7 +29,9 @@ roles/
 
 **1. Add a role**
 
-Create `roles/[role-name]/_jd.md` with the job description, then ask Claude to generate `_questions.md` from it.
+Create `roles/[role-name]/_jd.md` with the job description.
+
+You can generate `_questions.md` now if you want to review the questions first, but this is optional — step 3 (`/setup [candidate-name]`) generates it automatically if it hasn't been done yet.
 
 ```
 /setup [role-name]
@@ -41,7 +43,7 @@ Create `roles/[role-name]/[candidate-name]/cv.md` or `cv.pdf` with the candidate
 
 **3. Generate tailored questions**
 
-Run the same skill, this time with just the candidate name. Claude finds which role the candidate belongs to, then reads the JD and CV and produces a question set with a technical rubric specific to this candidate's background. If a candidate with that name exists under more than one role, Claude will ask you to pick which one.
+Run the same skill, this time with just the candidate name. Claude finds which role the candidate belongs to, generates `_questions.md` for the role first if it doesn't exist yet, then reads the JD and CV and produces a question set with a technical rubric specific to this candidate's background. If a candidate with that name exists under more than one role, Claude will ask you to pick which one.
 
 ```
 /setup [candidate-name]
