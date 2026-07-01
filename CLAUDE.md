@@ -10,7 +10,7 @@ This repo manages the end-to-end hiring process: job descriptions, candidate CVs
     _jd.md                  ← job description (source of truth for the role)
     _questions.md           ← master question template for this role
     [candidate-name]/       ← kebab-case, e.g. alice-tan
-      cv.md                 ← candidate's CV
+      cv.md or cv.pdf       ← candidate's CV
       questions.md          ← tailored copy of _questions.md; answers filled post-interview
       summary.md            ← hire rating, decision, pros/cons
 ```
@@ -21,6 +21,7 @@ This repo manages the end-to-end hiring process: job descriptions, candidate CVs
 - `_jd.md` and `_questions.md` — prefixed with `_` to distinguish role-level files from candidate folders
 - `_questions.md` is the **master template** — never edit it with candidate-specific content; always work in the candidate's own `questions.md`
 - `questions.md` per candidate starts as a tailored copy of `_questions.md`, then gets answers populated after the interview via Fireflies transcript review
+- Candidate CV can be `cv.md` or `cv.pdf` — agents check for either
 
 ## Agents
 

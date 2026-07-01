@@ -20,7 +20,7 @@ roles/
     _jd.md                       ← job description (source of truth)
     _questions.md                ← master question template (never edit directly)
     [candidate-name]/            ← kebab-case, e.g. alice-tan
-      cv.md                      ← candidate's CV
+      cv.md or cv.pdf            ← candidate's CV
       questions.md               ← tailored questions; answers filled post-interview
       summary.md                 ← hire rating, decision, pros/cons
 ```
@@ -37,7 +37,7 @@ Create `roles/[role-name]/_jd.md` with the job description, then ask Claude to g
 
 **2. Add a candidate**
 
-Create `roles/[role-name]/[candidate-name]/cv.md` with the candidate's CV.
+Create `roles/[role-name]/[candidate-name]/cv.md` or `cv.pdf` with the candidate's CV.
 
 **3. Generate tailored questions**
 
