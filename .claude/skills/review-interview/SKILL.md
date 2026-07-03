@@ -50,7 +50,21 @@ and instructions for how to assess and fill in answers.
 
 ---
 
+## Step 4: Export to PDF
+
+Run this to generate a matching `questions.pdf` next to the markdown file:
+
+```
+python3 .claude/scripts/md_to_pdf.py roles/[role-name]/[candidate-name]/questions.md roles/[role-name]/[candidate-name]/questions.pdf
+```
+
+If the script fails (e.g. `reportlab` not installed), tell the user `questions.md` was
+still saved successfully and that they can install it with `pip3 install reportlab`
+to enable PDF export.
+
+---
+
 ## Finishing up
 
-Confirm to the user that `questions.md` has been filled in, and suggest running
-`/summarize [candidate-name]` as the next step.
+Confirm to the user that `questions.md` and `questions.pdf` have been filled in/saved,
+and suggest running `/summarize [candidate-name]` as the next step.

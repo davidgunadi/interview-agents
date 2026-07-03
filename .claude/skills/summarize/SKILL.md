@@ -38,7 +38,21 @@ the exact output format for `summary.md`.
 
 ---
 
+## Step 3: Export to PDF
+
+Run this to generate a matching `summary.pdf` next to the markdown file:
+
+```
+python3 .claude/scripts/md_to_pdf.py roles/[role-name]/[candidate-name]/summary.md roles/[role-name]/[candidate-name]/summary.pdf
+```
+
+If the script fails (e.g. `reportlab` not installed), tell the user `summary.md` was
+still saved successfully and that they can install it with `pip3 install reportlab`
+to enable PDF export.
+
+---
+
 ## Finishing up
 
-Confirm to the user that `summary.md` has been saved, and print the hire rating and
-YES/NO decision so they can see the outcome at a glance.
+Confirm to the user that `summary.md` and `summary.pdf` have been saved, and print the
+hire rating and YES/NO decision so they can see the outcome at a glance.
