@@ -6,6 +6,20 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/); version
 
 Adding a new role, candidate, JD, or CV is not a functional change to the tool and is not logged here.
 
+## [2.0.0] - 2026-07-06
+
+### Changed
+- **Breaking:** `questions.md` and `summary.md` now carry two fully independent assessments — Technical Interview and Behavioral Interview — each with its own rubric, recommendation, rating, and hire decision, instead of one blended score. Existing candidate files in the old single-track format are not compatible with the new agents.
+- `role-setup` now selects 5–6 behavioral traits per role from the new shared `roles/_behavioral_question_bank.md`, replacing the old free-form "Soft Skill Questions" section.
+- `question-generator` carries the Behavioral Rubric over verbatim from `_questions.md` rather than tailoring it per candidate.
+- `create-summary` produces two independent verdicts (Technical + Behavioral); a front with no interview data yet is reported as "not enough context" instead of a fabricated rating.
+- `fireflies-reviewer` supports incremental review across two separate interview rounds (or one combined recording) without overwriting fields already filled by a prior pass, and logs uncategorized topics per front (`[Technical]` / `[Behavioral]`).
+
+### Added
+- `roles/_behavioral_question_bank.md` — shared master bank of behavioral traits, questions, and Green/Amber/Red anchors.
+- `roles/qa-engineering/`, `roles/qa-odoo/` — new role folders.
+- Versioning: this `CHANGELOG.md`, a version line in `README.md`, and a versioning policy in `CLAUDE.md`.
+
 ## [1.0.0] - 2026-07-06
 
 Baseline version at the time versioning was introduced.

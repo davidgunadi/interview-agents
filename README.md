@@ -1,6 +1,6 @@
 # Interview Agent
 
-**Version:** 1.0.0 — see [CHANGELOG.md](CHANGELOG.md) for what changed and why.
+**Version:** 2.0.0 — see [CHANGELOG.md](CHANGELOG.md) for what changed and why.
 
 A Claude-powered hiring system for managing end-to-end interviews at McEasy — from job descriptions to hire/no-hire decisions.
 
