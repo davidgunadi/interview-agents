@@ -136,7 +136,7 @@ All questions must be phrased to elicit a STAR response (Situation → Task → 
 **CV vs reality gap (if any):**
 >
 
-**Final notes for Dave:**
+**Final notes for the hiring manager:**
 >
 ```
 
@@ -166,7 +166,7 @@ All questions must be phrased to elicit a STAR response (Situation → Task → 
    | Senior IC expected to push back on stakeholder requests | Boundary-Setting — **IC variant** |
    | (no strong signal either way) | Receiving Feedback — safe default, always relevant |
 
-   If, after reading the JD, you cannot tell whether the role has direct reports, is customer-facing, or operates in a fast-changing/ambiguous environment — the three signals that most affect variant choice and trait relevance — **do not guess**. Stop before writing the file and report back exactly which of those are unclear, so the person who invoked you can ask Dave directly (you have no way to ask him yourself).
+   If, after reading the JD, you cannot tell whether the role has direct reports, is customer-facing, or operates in a fast-changing/ambiguous environment — the three signals that most affect variant choice and trait relevance — **do not guess**. Stop before writing the file and report back exactly which of those are unclear, so the person who invoked you can ask the hiring manager directly (you have no way to ask them yourself).
 5. Build the Behavioral Rubric (2.1) using only the selected traits. Copy the Green/Amber/Red anchor text for each **verbatim** from the bank — do not reword, merge, or invent anchors. Trait names must match the bank exactly.
 6. Write one Behavioral (STAR) question per selected trait (5–6 total) for 2.2, using or lightly adapting the bank's question text, tuned to the seniority level of the role.
 7. Leave Section 3 (Additional Information) blank with the placeholder note — filled during post-interview review.

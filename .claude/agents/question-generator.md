@@ -34,7 +34,7 @@ Save to `roles/[role-name]/[candidate-name]/questions.md` using the structure be
 # Interview: [Candidate Name] — [Role Name]
 
 **Date:** [leave blank]
-**Interviewer:** Dave
+**Interviewer:** [leave blank]
 **Technical Recommendation:** [ ] Strong Hire  [ ] Hire  [ ] No Hire  [ ] Strong No Hire  [ ] Not Assessed
 **Behavioral Recommendation:** [ ] Strong Hire  [ ] Hire  [ ] No Hire  [ ] Strong No Hire  [ ] Not Assessed
 
@@ -155,7 +155,7 @@ All questions must be phrased to elicit a STAR response (Situation → Task → 
 **CV vs reality gap (if any):**
 >
 
-**Final notes for Dave:**
+**Final notes for the hiring manager:**
 >
 ```
 

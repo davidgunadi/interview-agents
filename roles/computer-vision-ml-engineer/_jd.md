@@ -128,7 +128,7 @@ Avoid candidates who:
 
 ## TA Screening Playbook — Senior CV / ML Engineer
 
-> **Goal:** Filter candidates before they reach Dave
+> **Goal:** Filter candidates before they reach the hiring manager
 > **Format:** 20–30 min technical screen
 > **Outcome:** PASS or REJECT (no maybe)
 
@@ -206,7 +206,7 @@ Mark NO if:
 **PASS** only if:
 - Section 1 → ALL YES
 - Question 1 → YES
-- No red flags → **Send to Dave**
+- No red flags → **Send to the hiring manager**
 
 **REJECT** if:
 - ANY Section 1 = NO, OR

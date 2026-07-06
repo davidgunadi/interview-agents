@@ -6,6 +6,11 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/); version
 
 Adding a new role, candidate, JD, or CV is not a functional change to the tool and is not logged here.
 
+## [2.0.1] - 2026-07-06
+
+### Changed
+- Agent prompts and role templates (`role-setup`, `question-generator`, `fireflies-reviewer`, `create-summary`) no longer hardcode "Dave" as the hiring manager's name, so the pipeline is generic and replicable across interviewers/companies.
+
 ## [2.0.0] - 2026-07-06
 
 ### Changed

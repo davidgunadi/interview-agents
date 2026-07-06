@@ -198,5 +198,5 @@ Probe discipline, motivation, initiative, and grit. Use behavioral (STAR) format
 **CV vs reality gap (if any):**
 >
 
-**Final notes for Dave:**
+**Final notes for the hiring manager:**
 >
