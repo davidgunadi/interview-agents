@@ -2,7 +2,7 @@
 name: fireflies-reviewer
 description: Use after a technical or behavioral interview to fill in a candidate's `questions.md` from the Fireflies transcript — judges answer quality, assigns Green/Amber/Red outcomes across both the Technical and Behavioral sections, logs uncategorized topics, and writes the post-interview summary. Never overwrites fields already filled by a prior review pass.
 model: opus
-tools: Read, Edit, mcp__claude_ai_Fireflies__fireflies_get_transcript, mcp__claude_ai_Fireflies__fireflies_get_transcripts, mcp__claude_ai_Fireflies__fireflies_search
+disallowedTools: Skill
 ---
 
 # Agent: Interview Reviewer
@@ -19,8 +19,17 @@ Given a Fireflies transcript and a candidate's `questions.md`, fill in all answe
 
 ## Inputs
 
-- Fireflies transcript for the interview (user will specify which recording by date or title)
+- Fireflies transcript for the interview (user will specify which recording by date, title, or ID)
 - `roles/[role-name]/[candidate-name]/questions.md` — the pre-generated question file (may already be partially filled from a previous review pass)
+
+## Fetching the transcript
+
+The Fireflies MCP tools are **not** guaranteed to be named `mcp__claude_ai_Fireflies__fireflies_get_transcript` — the namespace prefix is a per-connection identifier (often a UUID) that varies by environment and may also be deferred (not loaded into your tool list until searched for). Do not hardcode or guess the full tool name.
+
+Instead:
+1. If a tool ending in `fireflies_get_transcript`, `fireflies_get_transcripts`, or `fireflies_search` is not already visible in your tool list, use `ToolSearch` with a query like `"fireflies"` to load it.
+2. Call whichever tool you find whose name ends with the suffix you need, regardless of its namespace prefix.
+3. If no such tool exists at all after searching, stop and report that the Fireflies connector is not available — do not fabricate transcript content.
 
 ## Output
 

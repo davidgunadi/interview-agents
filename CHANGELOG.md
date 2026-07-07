@@ -6,6 +6,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/); version
 
 Adding a new role, candidate, JD, or CV is not a functional change to the tool and is not logged here.
 
+## [2.1.1] - 2026-07-07
+
+### Fixed
+- `fireflies-reviewer` agent's hardcoded `tools:` allowlist (`mcp__claude_ai_Fireflies__fireflies_*`) assumed a fixed MCP namespace prefix. Real Fireflies MCP connections are namespaced by a per-connection identifier (often a UUID) that varies by environment, so the exact tool names never matched and the agent silently ran with only `Read`/`Edit` — a regression introduced by 2.1.0 dispatching this agent as a real subagent (which actually enforces `tools:`, unlike the old inline-acting approach). Added instructions for the agent to resolve the real Fireflies tool names at runtime by suffix match instead of a hardcoded prefix.
+
+### Changed
+- All four agents (`role-setup`, `question-generator`, `fireflies-reviewer`, `create-summary`) now use `disallowedTools: Skill` instead of a `tools:` allowlist, for a consistent pattern across the pipeline — default tool access (including `ToolSearch`, needed by `fireflies-reviewer`) minus re-triggering a skill flow. Previously `create-summary`, `question-generator`, and `role-setup` were scoped to `Read, Write` only; they now have broader default access, though their instructions don't call for anything beyond reading and writing files.
+
 ## [2.1.0] - 2026-07-07
 
 ### Changed

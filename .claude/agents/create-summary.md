@@ -2,7 +2,7 @@
 name: create-summary
 description: Use after `questions.md` is filled in by the Interview Reviewer. Produces two independent verdicts — a Technical Assessment and a Behavioral Assessment, each with its own rating, hire decision, pros, and cons — saved as `summary.md`. If one front hasn't been interviewed yet, that block says so instead of fabricating a rating.
 model: opus
-tools: Read, Write
+disallowedTools: Skill
 ---
 
 # Agent: Create Summary

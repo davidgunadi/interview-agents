@@ -1,6 +1,6 @@
 # Interview Agent
 
-**Version:** 2.1.0 — see [CHANGELOG.md](CHANGELOG.md) for what changed and why.
+**Version:** 2.1.1 — see [CHANGELOG.md](CHANGELOG.md) for what changed and why.
 
 A Claude-powered hiring system for managing end-to-end interviews at McEasy — from job descriptions to hire/no-hire decisions.
 
@@ -10,7 +10,7 @@ Must Have:
 
 - [Claude Desktop](https://claude.com/download)
 - [Git](https://git-scm.com/install/)
-- [Python](https://www.python.org/downloads/)
+- [Python](https://www.python.org/downloads/) (then run `pip3 install reportlab` — needed by `scripts/md_to_pdf.py` for PDF export)
 - [Node](https://nodejs.org/en/download)
 - Claude Pro or Max account
 

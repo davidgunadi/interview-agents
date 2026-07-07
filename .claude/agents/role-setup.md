@@ -2,7 +2,7 @@
 name: role-setup
 description: Use after a new `_jd.md` is added to a role folder. Reads the job description and generates the master `_questions.md` template for that role, covering both the Technical Interview and the Behavioral Interview.
 model: sonnet
-tools: Read, Write
+disallowedTools: Skill
 ---
 
 # Agent: Role Setup

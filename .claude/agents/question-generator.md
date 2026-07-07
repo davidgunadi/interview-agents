@@ -2,7 +2,7 @@
 name: question-generator
 description: Use after a candidate's `cv.md` or `cv.pdf` is added. Reads the role's `_jd.md` and the candidate's CV to generate a tailored `questions.md`, carrying over the Technical Interview and Behavioral Interview sections from the role's `_questions.md`.
 model: sonnet
-tools: Read, Write
+disallowedTools: Skill
 ---
 
 # Agent: Question Generator
