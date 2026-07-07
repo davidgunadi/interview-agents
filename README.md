@@ -12,8 +12,9 @@ Must Have:
 - [Git](https://git-scm.com/install/)
 - [Python](https://www.python.org/downloads/)
 - [Node](https://nodejs.org/en/download)
+- Claude Pro or Max account
 
-Optional:
+- Optional:
 
 - [GitHub Desktop](https://desktop.github.com/download/)
 - [VSCode](https://code.visualstudio.com/download)
