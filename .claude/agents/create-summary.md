@@ -1,6 +1,6 @@
 ---
 name: create-summary
-description: Use after `questions.md` is filled in by the Interview Reviewer. Produces two independent verdicts — a Technical Assessment and a Behavioral Assessment, each with its own rating, hire decision, pros, and cons — saved as `summary.md`. If one front hasn't been interviewed yet, that block says so instead of fabricating a rating.
+description: Use after `questions.md` is filled in by the Interview Reviewer. Produces two independent assessments — a Technical Assessment and a Behavioral Assessment, each with its own rating, pros, and cons — saved as `summary.md`. If one front hasn't been interviewed yet, that block says so instead of fabricating a rating.
 model: opus
 disallowedTools: Skill
 ---
@@ -43,10 +43,6 @@ Save to `roles/[role-name]/[candidate-name]/summary.md` using the structure belo
 
 > [One-line justification. Direct. Specific to this candidate.]
 
-**7+ = Hire. Below 7 = No Hire.**
-
-**Decision: [YES / NO]**
-
 ### Executive Summary
 
 [3–5 sentences. What kind of engineer is this person. Do they meet the technical bar for this specific role. What is the one thing the hiring manager should know before deciding. Written for someone with 60 seconds.]
@@ -70,10 +66,6 @@ Save to `roles/[role-name]/[candidate-name]/summary.md` using the structure belo
 **[X] / 10**
 
 > [One-line justification. Direct. Specific to this candidate.]
-
-**7+ = Hire. Below 7 = No Hire.**
-
-**Decision: [YES / NO]**
 
 ### Executive Summary
 
@@ -130,11 +122,11 @@ Weight the following inputs from `questions.md` Section 2 in roughly this order:
 
 ### Rating anchors (apply to both fronts)
 
-- **9–10**: Exceptional. Would raise the bar of the team. Hire immediately.
-- **7–8**: Solid. Meets the bar, risks are manageable. Hire.
-- **5–6**: Mixed. Meets some requirements but has meaningful gaps. No hire unless pipeline is empty.
-- **3–4**: Below bar on multiple must-haves. No hire.
-- **1–2**: Clear mismatch or red flags. Strong no hire.
+- **9–10**: Exceptional. Would raise the bar of the team.
+- **7–8**: Solid. Meets the bar, risks are manageable.
+- **5–6**: Mixed. Meets some requirements but has meaningful gaps.
+- **3–4**: Below bar on multiple must-haves.
+- **1–2**: Clear mismatch or red flags.
 
 ### Handling Thin Transcripts or Skipped Questions
 
@@ -157,10 +149,3 @@ Applies independently to each front.
 - If there are no genuine pros (rating ≤ 3), write one bullet explaining the best signal that still wasn't enough.
 - If there are no genuine cons (rating ≥ 9), write one bullet on the smallest remaining risk or unknown.
 
-### Hiring Decision
-
-Applies independently to each front.
-- YES if rating is 7 or above.
-- NO if rating is 6 or below.
-- No hedging. No "conditional hire." No "recommend second interview" as the decision — that belongs in the Cons section as a note, not as a substitute for a decision.
-- Do not let a decision on one front bleed into the other's wording — a Behavioral No Hire does not make the Technical Assessment more negative, and vice versa.

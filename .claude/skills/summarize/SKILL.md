@@ -3,7 +3,7 @@ name: summarize
 description: >
   Generates a hire summary for a candidate and saves it as summary.md in their folder.
   Use this skill whenever the user runs `/summarize [candidate-name]`, or asks
-  to generate a summary, produce a hire decision, or create summary.md for a candidate.
+  to generate a summary, produce a rating, or create summary.md for a candidate.
 ---
 
 # Generate Hire Summary
@@ -11,7 +11,7 @@ description: >
 ## Overview
 
 This skill reads a completed `questions.md` for a candidate and produces `summary.md`
-with a hire rating (1–10), YES/NO decision, executive summary, and evidence-backed pros/cons.
+with a rating (1–10), executive summary, and evidence-backed pros/cons.
 
 ---
 
@@ -32,7 +32,7 @@ with a hire rating (1–10), YES/NO decision, executive summary, and evidence-ba
 Invoke the Agent tool with `subagent_type: "create-summary"` and a self-contained prompt telling it to:
 
 - Read `roles/[role-name]/[candidate-name]/questions.md`
-- Derive the Technical and Behavioral ratings/decisions per its own rubric
+- Derive the Technical and Behavioral ratings per its own rubric
 - Save the result to `roles/[role-name]/[candidate-name]/summary.md`
 
 ---
@@ -54,4 +54,4 @@ to enable PDF export.
 ## Finishing up
 
 Confirm to the user that `summary.md` and `summary.pdf` have been saved, and print the
-hire rating and YES/NO decision so they can see the outcome at a glance.
+Technical and Behavioral ratings so they can see the outcome at a glance.
